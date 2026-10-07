@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kỷ niệm tình bạn ♡</title>
+
+    <!-- Nếu link có dữ liệu cá nhân hóa thì ẩn trang cho tới khi nạp xong (tránh nhá nội dung mẫu) -->
+    <script>
+      if (/[?&](c|data)=/.test(location.search)) {
+        document.documentElement.classList.add("is-loading");
+      }
+    </script>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <main class="container">
+        <!-- ================= PHẦN MỞ ĐẦU ================= -->
+        <header class="intro">
+          <div class="sparkle">✨</div>
+
+          <div class="intro-title">
+            <h1>
+              Trạm kỷ niệm<br />
+              để nhớ chúng ta nhé! ♡
+            </h1>
+          </div>
+
+          <p>Một góc nhỏ dành cho những kỷ niệm của chúng mình</p>
+        </header>
+
+        <!-- ================= 6 ẢNH KỶ NIỆM ================= -->
+        <section class="photos-collage">
+          <div class="collage-item item-1">
+            <img src="./ảnh 1.jpg" alt="Kỷ niệm 1" />
+          </div>
+          <div class="collage-item item-2">
+            <img src="./ảnh 2.jpg" alt="Kỷ niệm 2" />
+          </div>
+          <div class="collage-item item-3">
+            <img src="./ảnh 3.jpg" alt="Kỷ niệm 3" />
+          </div>
+          <div class="collage-item item-4">
+            <img src="./ảnh 4.jpg" alt="Kỷ niệm 4" />
+          </div>
+          <div class="collage-item item-5">
+            <img src="./ảnh 5.jpg" alt="Kỷ niệm 5" />
+          </div>
+          <div class="collage-item item-6">
+            <img src="./ảnh 4.jpg" alt="Kỷ niệm 6" />
+          </div>
+        </section>
+
+        <!-- ================= VIDEO (chỉ hiện khi khách có tải video) ================= -->
+        <section class="video-card" id="videoCard" hidden>
+          <div class="video-label">🎬 Một đoạn video nho nhỏ</div>
+          <video
+            id="memoryVideo"
+            controls
+            playsinline
+            preload="metadata"
+          ></video>
+        </section>
+
+        <!-- ================= HỘP NHẠC ================= -->
+        <section class="music-card">
+          <div class="music-disc-area">
+            <div class="music-disc" id="musicDisc">
+              <div class="disc-center">♡</div>
+            </div>
+          </div>
+
+          <div class="music-info">
+            <div class="music-label">♪ Một chút nhạc cho kỷ niệm</div>
+
+            <h2 id="songTitle">có một ngày chúng ta...</h2>
+
+            <div class="music-progress">
+              <span id="currentTime">0:00</span>
+
+              <input
+                id="progress"
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                step="0.1"
+              />
+
+              <span id="duration">0:00</span>
+            </div>
+
+            <div class="music-controls">
+              <button id="playBtn" class="play-btn" type="button">▶</button>
+
+              <button id="volumeBtn" class="volume-btn" type="button">
+                🔊
+              </button>
+
+              <input
+                id="volume"
+                type="range"
+                min="0"
+                max="1"
+                value="0.75"
+                step="0.01"
+              />
+            </div>
+          </div>
+
+          <!-- Nhạc mặc định (nếu khách không tải nhạc riêng) -->
+          <audio id="audio" preload="metadata">
+            <source src="./nhạcxuan.mp3" type="audio/mpeg" />
+            Trình duyệt của bạn không hỗ trợ phát nhạc.
+          </audio>
+        </section>
+
+        <!-- ================= LỜI CHÚC ================= -->
+        <section class="letter">
+          <div class="flower">🌷</div>
+
+          <h2>Gửi người bạn của mình... ♡</h2>
+
+          <!-- Nếu link có lời chúc riêng, phần này sẽ được thay thế -->
+          <div id="letterBody">
+            <p>
+              Gửi tình bạn 21+ của bọn mình<br />
+              Chúc best friend của tớ luôn vui vẻ, bình an và gặp thật nhiều
+              điều tốt đẹp nhé 🫶🏻<br />
+              Mong cậu dù có trải qua chuyện gì cũng luôn mạnh mẽ, yêu thương
+              bản thân và đừng quên rằng phía sau cậu lúc nào cũng có tớ. Có thể
+              cuộc sống sau này sẽ có lúc mỗi đứa bận rộn với những con đường
+              riêng, nhưng tớ vẫn mong chúng mình sẽ luôn giữ được tình bạn này,
+              vẫn có thể thoải mái kể cho nhau nghe những chuyện vui buồn trong
+              cuộc sống.<br />
+            </p>
+
+            <p>
+              Cảm ơn cậu vì đã xuất hiện, đã luôn lắng nghe, chia sẻ và đồng
+              hành cùng tớ trong rất nhiều khoảnh khắc. Mong cho những điều cậu
+              đang cố gắng sẽ có một kết quả thật xứng đáng, những điều không
+              vui sẽ sớm qua đi, còn những điều tốt đẹp thì sẽ đến thật nhiều.
+              Hy vọng chúng mình sẽ luôn đồng hành với nhau thật lâu, cùng nhau
+              trưởng thành, cùng nhau thực hiện những điều mình mong muốn và có
+              thật nhiều kỷ niệm đẹp để sau này nhìn lại vẫn có thể mỉm cười.
+              💗<br />
+            </p>
+
+            <p>
+              Dù sau này có thế nào thì cậu vẫn luôn là một người bạn rất đặc
+              biệt đối với tớ. 🫶🏻 <br />
+            </p>
+
+            <p>
+              Chúc best friend của tớ luôn vui vẻ, bình an và gặp thật nhiều
+              điều tốt đẹp nhé 🫶🏻 <br />
+            </p>
+
+            <p>
+              Mong cậu dù có trải qua chuyện gì cũng luôn mạnh mẽ, yêu thương
+              bản thân và đừng quên rằng phía sau cậu lúc nào cũng có tớ. Có thể
+              cuộc sống sau này sẽ có lúc mỗi đứa bận rộn với những con đường
+              riêng, nhưng tớ vẫn mong chúng mình sẽ luôn giữ được tình bạn này,
+              vẫn có thể thoải mái kể cho nhau nghe những chuyện vui buồn trong
+              cuộc sống.🙆🏼‍♀️
+            </p>
+
+            <p class="wish">
+              Chúc tình bạn của chúng ta<br />
+              luôn thật lâu, thật vui và thật đáng nhớ. 💗
+            </p>
+          </div>
+
+          <div class="signature" id="signature">
+            — Triệu Thị Xuân mãi yêu cậu —
+          </div>
+        </section>
+
+        <footer>
+          ✨ Cảm ơn vì đã là một phần trong thanh xuân của nhau ♡ ✨
+        </footer>
+      </main>
+    </div>
+
+    <!-- JAVASCRIPT 1: trình phát nhạc -->
+    <script src="./script.js"></script>
+
+    <!-- JAVASCRIPT 2: cá nhân hóa thiệp từ link -->
+    <script>
+      (function () {
+        /* ============ CẤU HÌNH (phải trùng upload.html) ============ */
+        const CLOUD_NAME = "yx8ugl6f";
+
+        const RES = "https://res.cloudinary.com/" + CLOUD_NAME + "/";
+        const IMG_BASE = RES + "image/upload/f_auto,q_auto,w_1000/";
+        const VIDEO_BASE = RES + "video/upload/"; // nhạc & video đều nằm trong nhóm "video"
+        const RAW_BASE = RES + "raw/upload/"; // file JSON chứa dữ liệu thiệp (link ngắn)
+
+        // Đường dẫn gọn do upload.html tạo: v1234567890/ten_file.ext
+        const PATH_RE = /^v\d+\/[\w\-\/]+\.[a-z0-9]+$/i;
+
+        const html = document.documentElement;
+        const params = new URLSearchParams(window.location.search);
+        const shortId = params.get("c"); // link ngắn:  ?c=v123/abcdef
+        const longData = params.get("data"); // link dài (dự phòng): ?data=....
+
+        if (!shortId && !longData) return; // link gốc -> giữ thiệp mặc định
+
+        // Phòng khi mạng chậm: tối đa chờ 8 giây rồi vẫn hiện trang
+        const failSafe = setTimeout(
+          () => html.classList.remove("is-loading"),
+          8000,
+        );
+
+        /* ---------- Giải mã link dài (base64url UTF-8) ---------- */
+        function decodeData(s) {
+          let b64 = s.replace(/ /g, "+").replace(/-/g, "+").replace(/_/g, "/");
+          while (b64.length % 4) b64 += "=";
+          const bin = atob(b64);
+          const bytes = Uint8Array.from(bin, (c) => c.charCodeAt(0));
+          return JSON.parse(new TextDecoder().decode(bytes));
+        }
+
+        /* ---------- Nạp dữ liệu từ link ngắn (file JSON trên Cloudinary) ---------- */
+        async function loadShort(id) {
+          if (!/^(v\d+\/)?[\w\-\/\.]+$/.test(id) || id.includes("..")) {
+            throw new Error("Mã thiệp không hợp lệ");
+          }
+          // upload.html bỏ đuôi .json cho link ngắn hơn; thử cả hai kiểu
+          const tries = [id, id + ".json"];
+          let lastErr;
+          for (const p of tries) {
+            try {
+              const res = await fetch(RAW_BASE + p, { cache: "no-cache" });
+              if (res.ok) return await res.json();
+              lastErr = new Error("HTTP " + res.status);
+            } catch (e) {
+              lastErr = e;
+            }
+          }
+          throw lastErr;
+        }
+
+        /* ---------- Hàm tiện ích ---------- */
+        const text = (v, max) =>
+          typeof v === "string" ? v.trim().slice(0, max) : "";
+
+        function toImageUrl(item) {
+          if (typeof item !== "string") return null;
+          if (item.startsWith("https://res.cloudinary.com/")) return item;
+          if (PATH_RE.test(item)) return IMG_BASE + item;
+          return null;
+        }
+
+        /* ---------- Ghi dữ liệu vào thiệp ---------- */
+        function apply(d) {
+          // 1. Tên -> chữ ký cuối thư
+          const name = text(d.n, 40);
+          if (name) {
+            document.getElementById("signature").textContent =
+              "— " + name + " —";
+          }
+
+          // 2. Lời chúc -> thay nội dung thư
+          const msg = text(d.m, 800);
+          if (msg) {
+            const body = document.getElementById("letterBody");
+            body.textContent = "";
+            const p = document.createElement("p");
+            p.className = "wish";
+            p.style.whiteSpace = "pre-line"; // giữ xuống dòng người dùng gõ
+            p.textContent = msg; // textContent: an toàn, không chạy HTML lạ
+            body.appendChild(p);
+          }
+
+          // 3. Ảnh -> 6 khung collage (ít ảnh thì lặp lại cho đủ khung)
+          const urls = (d.i || d.imgs || [])
+            .map(toImageUrl)
+            .filter(Boolean)
+            .slice(0, 6);
+          if (urls.length) {
+            document.querySelectorAll(".collage-item img").forEach((img, k) => {
+              img.src = urls[k % urls.length];
+            });
+          }
+
+          // 4. Nhạc -> thay bài mặc định
+          if (typeof d.a === "string" && PATH_RE.test(d.a)) {
+            const audio = document.getElementById("audio");
+            audio.src = VIDEO_BASE + d.a; // thuộc tính src được ưu tiên hơn <source>
+            audio.load();
+            document.getElementById("songTitle").textContent =
+              text(d.s, 60) || "Bài hát của chúng mình";
+            document.getElementById("songArtist").textContent = "";
+          }
+
+          // 5. Video -> hiện khung video
+          if (typeof d.v === "string" && PATH_RE.test(d.v)) {
+            const src = /\.(mp4|webm)$/i.test(d.v)
+              ? VIDEO_BASE + d.v
+              : // định dạng khác (vd .mov iPhone) -> Cloudinary đổi sang mp4 cho mọi máy xem được
+                VIDEO_BASE + "f_mp4,vc_h264/" + d.v.replace(/\.[^.]+$/, ".mp4");
+            const video = document.getElementById("memoryVideo");
+            video.src = src;
+            document.getElementById("videoCard").hidden = false;
+
+            // Xem video thì tạm dừng nhạc nền cho khỏi chồng tiếng
+            video.addEventListener("play", () => {
+              const audio = document.getElementById("audio");
+              if (!audio.paused) audio.pause();
+            });
+          }
+        }
+
+        /* ---------- Chạy ---------- */
+        (async function run() {
+          try {
+            const data = shortId
+              ? await loadShort(shortId)
+              : decodeData(longData);
+            apply(data);
+          } catch (e) {
+            console.error("Không đọc được dữ liệu thiệp:", e);
+          } finally {
+            clearTimeout(failSafe);
+            html.classList.remove("is-loading");
+          }
+        })();
+      })();
+    </script>
+  </body>
+</html>
